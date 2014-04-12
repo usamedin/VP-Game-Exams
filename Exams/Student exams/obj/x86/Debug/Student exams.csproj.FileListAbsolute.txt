@@ -1,0 +1,9 @@
+C:\Users\Усамедин\AppData\Local\Temporary Projects\Student exams\bin\Debug\Student exams.exe
+C:\Users\Усамедин\AppData\Local\Temporary Projects\Student exams\bin\Debug\Student exams.pdb
+C:\Users\Усамедин\AppData\Local\Temporary Projects\Student exams\obj\x86\Debug\Student_exams.Form1.resources
+C:\Users\Усамедин\AppData\Local\Temporary Projects\Student exams\obj\x86\Debug\Student_exams.Properties.Resources.resources
+C:\Users\Усамедин\AppData\Local\Temporary Projects\Student exams\obj\x86\Debug\Student exams.csproj.GenerateResource.Cache
+C:\Users\Усамедин\AppData\Local\Temporary Projects\Student exams\obj\x86\Debug\Student exams.exe
+C:\Users\Усамедин\AppData\Local\Temporary Projects\Student exams\obj\x86\Debug\Student exams.pdb
+C:\Users\Усамедин\documents\visual studio 2010\Projects\Student exams\Student exams\obj\x86\Debug\Student exams.exe
+C:\Users\Усамедин\documents\visual studio 2010\Projects\Student exams\Student exams\obj\x86\Debug\Student exams.pdb

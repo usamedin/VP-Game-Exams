@@ -11,18 +11,17 @@ namespace Student_exams
 {
     public partial class Play : Form
     {
+        Game game;
         public Play()
         {
             InitializeComponent();
             game = new Game(this);
             game.init();
         }
-        Game game;
         private void timer_Tick(object sender, EventArgs e)
         {
             game.play();
         }
-
         private void pbox_Click(object sender, EventArgs e)
         {
 

@@ -24,5 +24,31 @@ namespace Student_exams
             this.width = width;
             this.height = height;
         }
+        public void moveStudent()
+        {
+            switch (direction)
+            {
+                case 1:
+                position.y -= speed;
+                centerPosition.y-=speed;
+                break;
+
+                case 2:
+                position.x += speed;
+                centerPosition.x+=speed;
+                break;
+
+                case 3:
+               position.y += speed;
+                centerPosition.y+=speed;
+                break;
+
+                case 4:
+                position.x -= speed;
+                centerPosition.x -= speed;
+                break;
+                
+            }
+        }
     }
 }

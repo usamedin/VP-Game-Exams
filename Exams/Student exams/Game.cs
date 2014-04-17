@@ -11,99 +11,129 @@ namespace Student_exams
 {
     class Game
     {
+        public System.Windows.Forms.PictureBox pbox;
+        List<Profesor> profesors;
+        List<Student> students;
+        List<Bullet> bullets;
+
         public Game(Play p)
         {
             this.formPlay = p;
         }
         Play formPlay;
-        Bitmap bufl;
+        Bitmap bitMap;
+
         Profesor p;
         Profesor p1;
-        Student s;
-        public System.Windows.Forms.PictureBox pbox;
-       
-        Bullet b;
+        Student st;
+        Bullet bu;
+
+        public void play()
+        {
+            drowScreen();
+            moveBullets();
+            moveStudents();
+
+        }
+
         public void init()
         {
+            profesors = new List<Profesor>();
+            students = new List<Student>();
+            bullets = new List<Bullet>();
             pbox = formPlay.pbox;
 
             p = new Profesor(new Point(100, 100), 30, 30, 1000, 20, 100);
             p1 = new Profesor(new Point(400, 400), 30, 30, 1000, 20, 300);
-            s = new Student(new Point(200,200), 20, 20, 5, 2, 200);
-            if (p1.isEnemyInRange(s.centerPosition))
-            {
-                b = new Bullet(new Point(p1.position.x, p1.position.y), 10, 10,1, s.centerPosition, p1.centerPosition, 50);
-                //  System.Windows.Forms.MessageBox.Show(b.centerPosition.x+" "+b.centerPosition.y+"");
-            }
-        }
-        public void play()
-        {
+            st = new Student(new Point(200, 400), 20, 20, 2, 1, 20);
 
-            bufl = new Bitmap(pbox.Width, pbox.Height);
-            using (Graphics g = Graphics.FromImage(bufl))
+            profesors.Add(p);
+            profesors.Add(p1);
+            students.Add(st);
+
+            if (p1.isEnemyInRange(st.centerPosition))
             {
-               // g.FillRectangle(Brushes.White, new Rectangle(0, 0, pbox.Width, pbox.Height));
-                drowProfesor(p, g);
-                drowProfesor(p1, g);
-                drowStudent(s, g);
-                if (b != null)
-                {
-                    drowBullet(b, g);
-                }
-               pbox.CreateGraphics().DrawImageUnscaled(bufl, 0, 0);
+                bu = new Bullet(new Point(p1.position.x, p1.position.y), 10, 10, 20, st.centerPosition, p1.centerPosition, 50);
+                bullets.Add(bu);
             }
-            
-            if (b != null)
-            {
-                if (!b.hitEnemy(s))
-                {
-                    moveBullet(b);
-                }
-            }
-            bufl.Dispose();
-            bufl = null;
-            
         }
+       
+
+        public void drowScreen()
+        {
+            bitMap = new Bitmap(pbox.Width, pbox.Height);
+            using (Graphics g = Graphics.FromImage(bitMap))
+            {
+                g.FillRectangle(Brushes.White, new Rectangle(0, 0, pbox.Width, pbox.Height));
+                for (int i = 0; i < profesors.Count; i++)
+                {
+                    drowProfesor(profesors[i], g);
+                }
+
+                for (int i = 0; i < students.Count; i++)
+                {
+                    g.FillRectangle(Brushes.Red, new Rectangle(students[i].position.x, students[i].position.y, students[i].width, students[i].height));
+                }
+
+                for (int i = 0; i < bullets.Count; i++)
+                {
+                    g.FillRectangle(Brushes.Blue, new Rectangle(bullets[i].position.x, bullets[i].position.y, bullets[i].width, bullets[i].height));
+                }
+                pbox.CreateGraphics().DrawImageUnscaled(bitMap, 0, 0);
+            }
+            bitMap.Dispose();
+            bitMap = null;
+        }
+
         public void drowProfesor(Profesor p, Graphics g)
         {
             g.FillRectangle(Brushes.Black, new Rectangle(p.position.x, p.position.y, p.width, p.height));
             g.DrawEllipse(new Pen(Brushes.Green), p.centerPosition.x - p.range, p.centerPosition.y - p.range, p.range * 2, p.range * 2);
-
         }
-
-        public void drowStudent(Student s, Graphics g)
+        public void moveStudents()
         {
-            g.FillRectangle(Brushes.Red, new Rectangle(s.position.x, s.position.y, s.width, s.height));
-        }
-
-        public void drowBullet(Bullet b, Graphics g)
-        {
-            g.FillRectangle(Brushes.Blue, new Rectangle(b.position.x, b.position.y, b.width, b.height));
-        }
-        public int bulletXDir(int  p, int s)
-        {
-            if ((s - p) > 0)
+            for (int i = 0; i < students.Count; i++)
             {
-                return 1;
-            }
-            else
-            {
-                return -1;
+                students[i].moveStudent();
             }
         }
-        public void moveBullet(Bullet b)
+        
+        public void moveBullets()
         {
-            if (Math.Abs(b.sorce.x - b.target.x) < Math.Abs(b.sorce.y - b.target.y))
+            for (int i = 0; i < bullets.Count; i++)
             {
-                b.position.x += b.speed * bulletXDir(b.sorce.x, b.target.x);
-                b.position.y = ((b.sorce.y - b.target.y) / (b.sorce.x - b.target.x)) * (b.position.x - b.target.x) + b.target.y;
+                for (int j = 0; i < students.Count; i++)
+                {
+                    if (bullets[i].hitEnemy(students[j]))
+                    {
+                        students[j].health -= bullets[i].demage;
+                        if (students[j].health < 0)
+                        {
+                            students.RemoveAt(j);
+                        }
+                        bullets.RemoveAt(i);
+                        break;
+                    }
+                    else
+                    {
+                        moveBulletPosition(bullets[i]);
+                    }
+                }
+            }
+        }
+        public void moveBulletPosition(Bullet b)
+        {
+            //Witch coordinate to increment
+            if (b.moveXorY == 1)
+            {
+                b.position.x += b.speed * b.moveDir;
+                b.position.y = (int)(b.mKoeficient * (b.position.x - b.target.x) + b.target.y);
                 //System.Windows.Forms.MessageBox.Show("y");
             }
             else
             {
-                //System.Windows.Forms.MessageBox.Show("x");
-                b.position.y += b.speed * bulletXDir(b.sorce.y, b.target.y);
-                b.position.x = ((b.sorce.x - b.target.x) / (b.sorce.y - b.target.y)) * (b.position.y - b.target.y) + b.target.x;
+                b.position.y += b.speed * b.moveDir;
+                b.position.x = (int)(b.mKoeficient * (b.position.y - b.target.y) + b.target.x);
             }
             b.centerPosition = new Point(b.position.x + (b.width / 2), b.position.y + (b.height / 2));
         }

@@ -14,3 +14,11 @@ C:\Users\Усамедин\Documents\Visual Studio 2010\Projects\Exams\Student ex
 C:\Users\Усамедин\Documents\Visual Studio 2010\Projects\Exams\Student exams\obj\x86\Debug\Student_exams.Play.resources
 C:\Users\Усамедин\Documents\Visual Studio 2010\Projects\Exams\Student exams\obj\x86\Debug\Exams.Properties.Resources.resources
 C:\Users\Усамедин\Documents\Visual Studio 2010\Projects\Exams\Student exams\obj\x86\Debug\Exems.csproj.GenerateResource.Cache
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Exams.exe
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Exams.pdb
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\bin\Debug\Exams.exe
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\bin\Debug\Exams.pdb
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Exems.csprojResolveAssemblyReference.cache
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Student_exams.Play.resources
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Exams.Properties.Resources.resources
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Exems.csproj.GenerateResource.Cache

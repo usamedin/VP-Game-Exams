@@ -13,6 +13,11 @@ namespace Student_exams
         {
             this.x = x;
             this.y = y;
-        }  
+        }
+        public Point(Point t)
+        {
+            this.x = t.x;
+            this.y = t.y;
+        }
     }
 }

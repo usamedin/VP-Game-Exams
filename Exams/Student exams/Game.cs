@@ -15,10 +15,17 @@ namespace Student_exams
         List<Profesor> profesors;
         List<Student> students;
         List<Bullet> bullets;
+        Stage[] stages = Data.stages;
+        int level;
+        int timer;
+        int generatedStudents;
+        int sClass;
+        int nextStudentSpown;
 
-        public Game(Play p)
+        public Game(Play p, int level)
         {
             this.formPlay = p;
+            this.level = level;
         }
         Play formPlay;
         Bitmap bitMap;
@@ -28,12 +35,14 @@ namespace Student_exams
         Student st;
         Bullet bu;
 
+
         public void play()
         {
             drowScreen();
+            genStudent();
             moveBullets();
             moveStudents();
-
+            timer++;
         }
 
         public void init()
@@ -42,22 +51,45 @@ namespace Student_exams
             students = new List<Student>();
             bullets = new List<Bullet>();
             pbox = formPlay.pbox;
+            timer = 0;
+            sClass = 0;
+            generatedStudents = 0;
+            nextStudentSpown = 0;
 
             p = new Profesor(new Point(100, 100), 30, 30, 1000, 20, 100);
             p1 = new Profesor(new Point(400, 400), 30, 30, 1000, 20, 300);
             st = new Student(new Point(200, 400), 20, 20, 2, 1, 20);
 
-            profesors.Add(p);
+          //  profesors.Add(p);
             profesors.Add(p1);
             students.Add(st);
 
             if (p1.isEnemyInRange(st.centerPosition))
             {
-                bu = new Bullet(new Point(p1.position.x, p1.position.y), 10, 10, 20, st.centerPosition, p1.centerPosition, 50);
+                bu = new Bullet(new Point(p1.position.x, p1.position.y), 10, 10, 1, st.centerPosition, p1.centerPosition, 50);
                 bullets.Add(bu);
             }
         }
-       
+        public void genStudent()
+        {
+            if (sClass < stages[level].classes)
+            {
+                if (generatedStudents < stages[level].studentsPerClas)
+                {
+                    if (nextStudentSpown >= timer)
+                    {
+                        Student student = new Student(stages[level].startPosition, 20, 20, 2, 2, 100);
+                        students.Add(student);// here is the problem
+                        nextStudentSpown = timer + 260;
+                    }
+                }
+                else
+                {
+                    generatedStudents = 0;
+                    nextStudentSpown = timer + 300;
+                }
+            }
+        }
 
         public void drowScreen()
         {
@@ -65,6 +97,8 @@ namespace Student_exams
             using (Graphics g = Graphics.FromImage(bitMap))
             {
                 g.FillRectangle(Brushes.White, new Rectangle(0, 0, pbox.Width, pbox.Height));
+
+                drowStage(g);
                 for (int i = 0; i < profesors.Count; i++)
                 {
                     drowProfesor(profesors[i], g);
@@ -85,6 +119,99 @@ namespace Student_exams
             bitMap = null;
         }
 
+
+        public void drowStage(Graphics g)
+        {
+            int x, y, pathWidth, lastDir;
+            pathWidth = 60;
+            int width = 0, height = 0;
+            Color colour = System.Drawing.ColorTranslator.FromHtml("#339900");
+            g.FillRectangle(new SolidBrush(colour), new Rectangle(stages[level].startPosition.x, stages[level].startPosition.y, stages[level].checkpoints[0].value + pathWidth, pathWidth));
+            y = stages[level].startPosition.y;
+            x = stages[level].checkpoints[0].value;
+            lastDir = 2;
+            for (int i = 0; i < stages[level].numCP - 1; i++)
+            {
+                if (lastDir == 2)
+                {
+                    if (stages[level].checkpoints[i].coordinate == 3)
+                    {
+                        if (i != 0)
+                        {
+                            y = stages[level].checkpoints[i - 1].value;
+                            x = stages[level].checkpoints[i].value;
+                        }
+                        width = pathWidth;
+                        height = stages[level].checkpoints[i + 1].value - y + pathWidth;
+                    }
+                    else if (stages[level].checkpoints[i].coordinate == 1)
+                    {
+                        x = stages[level].checkpoints[i].value;
+                        y = stages[level].checkpoints[i + 1].value;
+                        width = pathWidth;
+                        height = y - stages[level].checkpoints[i + 1].value + pathWidth;
+                    }
+                }
+                else if (lastDir == 3)
+                {
+                    if (stages[level].checkpoints[i].coordinate == 4)
+                    {
+                        x = stages[level].checkpoints[i + 1].value;
+                        y = stages[level].checkpoints[i].value;
+                        width = stages[level].checkpoints[i - 1].value - x;
+                        height = pathWidth;
+                    }
+                    else if (stages[level].checkpoints[i].coordinate == 2)
+                    {
+                        x = stages[level].checkpoints[i - 1].value;
+                        y = stages[level].checkpoints[i].value;
+                        width = stages[level].checkpoints[i + 1].value - x;
+                        height = pathWidth;
+                    }
+
+                }
+                else if (lastDir == 4)
+                {
+                    if (stages[level].checkpoints[i].coordinate == 3)
+                    {
+                        x = stages[level].checkpoints[i].value;
+                        y = stages[level].checkpoints[i - 1].value;
+                        width = pathWidth;
+                        height = stages[level].checkpoints[i + 1].value - y + pathWidth;
+                    }
+                    else if (stages[level].checkpoints[i].coordinate == 1)
+                    {
+                        x = stages[level].checkpoints[i].value;
+                        y = stages[level].checkpoints[i + 1].value;
+                        width = pathWidth;
+                        height = y - stages[level].checkpoints[i + 1].value + pathWidth;
+                    }
+
+                }
+                else if (lastDir == 1)
+                {
+                    if (stages[level].checkpoints[i].coordinate == 4)
+                    {
+                        x = stages[level].checkpoints[i + 1].value;
+                        y = stages[level].checkpoints[i].value;
+                        width = stages[level].checkpoints[i - 1].value - x;
+                        height = pathWidth;
+                    }
+                    else if (stages[level].checkpoints[i].coordinate == 2)
+                    {
+                        x = stages[level].checkpoints[i].value;
+                        y = stages[level].checkpoints[i + 1].value;
+                        width = stages[level].checkpoints[i + 1].value - x;
+                        height = pathWidth;
+                    }
+
+                }
+
+                lastDir = stages[level].checkpoints[i].coordinate;
+                g.FillRectangle(new SolidBrush(colour), new Rectangle(x, y, width, height));
+            }
+        }
+
         public void drowProfesor(Profesor p, Graphics g)
         {
             g.FillRectangle(Brushes.Black, new Rectangle(p.position.x, p.position.y, p.width, p.height));
@@ -94,15 +221,15 @@ namespace Student_exams
         {
             for (int i = 0; i < students.Count; i++)
             {
-                students[i].moveStudent();
+                students[i].moveStudent(stages[level].checkpoints);
             }
         }
-        
+
         public void moveBullets()
         {
             for (int i = 0; i < bullets.Count; i++)
             {
-                for (int j = 0; i < students.Count; i++)
+                for (int j = 0; j < students.Count; j++)
                 {
                     if (bullets[i].hitEnemy(students[j]))
                     {

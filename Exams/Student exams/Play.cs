@@ -15,7 +15,7 @@ namespace Student_exams
         public Play()
         {
             InitializeComponent();
-            game = new Game(this);
+            game = new Game(this,0);
             game.init();
         }
         private void timer_Tick(object sender, EventArgs e)

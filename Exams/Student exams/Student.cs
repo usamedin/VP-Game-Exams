@@ -24,30 +24,45 @@ namespace Student_exams
             this.width = width;
             this.height = height;
         }
-        public void moveStudent()
+        public void moveStudent(Checkpoint[] ch)
         {
             switch (direction)
             {
                 case 1:
-                position.y -= speed;
-                centerPosition.y-=speed;
-                break;
+                    position.y -= speed;
+                    centerPosition.y -= speed;
+                    if (position.y < ch[checkpoint].value)
+                    {
+                        direction = ch[checkpoint].coordinate;
+                    }
+                    break;
 
                 case 2:
-                position.x += speed;
-                centerPosition.x+=speed;
-                break;
+                    position.x += speed;
+                    centerPosition.x += speed;
+                    if (position.x > ch[checkpoint].value)
+                    {
+                        direction = ch[checkpoint].coordinate;
+                    }
+                    break;
 
                 case 3:
-               position.y += speed;
-                centerPosition.y+=speed;
-                break;
+                    position.y += speed;
+                    centerPosition.y += speed;
+                    if (position.y > ch[checkpoint].value)
+                    {
+                        direction = ch[checkpoint].coordinate;
+                    }
+                    break;
 
                 case 4:
-                position.x -= speed;
-                centerPosition.x -= speed;
-                break;
-                
+                    position.x -= speed;
+                    centerPosition.x -= speed;
+                    if (position.x < ch[checkpoint].value)
+                    {
+                        direction = ch[checkpoint].coordinate;
+                    }
+                    break;
             }
         }
     }

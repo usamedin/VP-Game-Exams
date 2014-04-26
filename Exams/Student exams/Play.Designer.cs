@@ -29,54 +29,44 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pbox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cash = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lives = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.level = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbDem = new System.Windows.Forms.TextBox();
+            this.tbRange = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbAtackSpeed = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbox
-            // 
-            this.pbox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pbox.Location = new System.Drawing.Point(-1, 36);
-            this.pbox.Name = "pbox";
-            this.pbox.Size = new System.Drawing.Size(800, 600);
-            this.pbox.TabIndex = 0;
-            this.pbox.TabStop = false;
-            this.pbox.Click += new System.EventHandler(this.pbox_Click);
             // 
             // label1
             // 
@@ -87,14 +77,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Money:";
             // 
-            // textBox1
+            // cash
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(61, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(89, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.cash.Enabled = false;
+            this.cash.Location = new System.Drawing.Point(61, 10);
+            this.cash.Name = "cash";
+            this.cash.Size = new System.Drawing.Size(89, 20);
+            this.cash.TabIndex = 2;
+            this.cash.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
@@ -116,127 +106,74 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Profesors";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox2.Location = new System.Drawing.Point(810, 36);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(807, 99);
+            this.label4.Location = new System.Drawing.Point(814, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "label4";
+            this.label4.Text = "Ass. T.D.";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(874, 99);
+            this.label5.Location = new System.Drawing.Point(880, 99);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "label5";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox3.Location = new System.Drawing.Point(877, 36);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
+            this.label5.Text = "pr. G.M.";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(941, 99);
+            this.label6.Location = new System.Drawing.Point(947, 99);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 10;
-            this.label6.Text = "label6";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox4.Location = new System.Drawing.Point(944, 36);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
+            this.label6.Text = "pr. L.A.";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(807, 191);
+            this.label7.Location = new System.Drawing.Point(814, 191);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 12;
-            this.label7.Text = "label7";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox5.Location = new System.Drawing.Point(810, 128);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
+            this.label7.Text = "pr. MKP";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(874, 191);
+            this.label8.Location = new System.Drawing.Point(880, 191);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.Size = new System.Drawing.Size(41, 13);
             this.label8.TabIndex = 14;
-            this.label8.Text = "label8";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox6.Location = new System.Drawing.Point(877, 128);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
+            this.label8.Text = "pr. S.M";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(941, 191);
+            this.label9.Location = new System.Drawing.Point(947, 191);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.Size = new System.Drawing.Size(42, 13);
             this.label9.TabIndex = 16;
-            this.label9.Text = "label9";
+            this.label9.Text = "pr. V.B.";
             // 
-            // pictureBox7
+            // lives
             // 
-            this.pictureBox7.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox7.Location = new System.Drawing.Point(944, 128);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox7.TabIndex = 15;
-            this.pictureBox7.TabStop = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(281, 10);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(40, 20);
-            this.textBox2.TabIndex = 18;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lives.Enabled = false;
+            this.lives.Location = new System.Drawing.Point(247, 10);
+            this.lives.Name = "lives";
+            this.lives.Size = new System.Drawing.Size(40, 20);
+            this.lives.TabIndex = 18;
+            this.lives.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(233, 13);
+            this.label11.Location = new System.Drawing.Point(199, 13);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 13);
             this.label11.TabIndex = 17;
@@ -244,26 +181,26 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(740, 8);
+            this.button1.Location = new System.Drawing.Point(768, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 23);
             this.button1.TabIndex = 19;
             this.button1.Text = "| |";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // level
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(396, 10);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(20, 20);
-            this.textBox3.TabIndex = 21;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.level.Enabled = false;
+            this.level.Location = new System.Drawing.Point(362, 10);
+            this.level.Name = "level";
+            this.level.Size = new System.Drawing.Size(20, 20);
+            this.level.TabIndex = 21;
+            this.level.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(348, 13);
+            this.label10.Location = new System.Drawing.Point(314, 13);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(38, 13);
             this.label10.TabIndex = 20;
@@ -284,23 +221,25 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(810, 294);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.Size = new System.Drawing.Size(47, 13);
             this.label13.TabIndex = 23;
-            this.label13.Text = "Grades";
+            this.label13.Text = "Demage";
             // 
-            // textBox4
+            // tbDem
             // 
-            this.textBox4.Location = new System.Drawing.Point(904, 291);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(72, 20);
-            this.textBox4.TabIndex = 24;
+            this.tbDem.Enabled = false;
+            this.tbDem.Location = new System.Drawing.Point(904, 291);
+            this.tbDem.Name = "tbDem";
+            this.tbDem.Size = new System.Drawing.Size(53, 20);
+            this.tbDem.TabIndex = 24;
             // 
-            // textBox5
+            // tbRange
             // 
-            this.textBox5.Location = new System.Drawing.Point(904, 326);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(72, 20);
-            this.textBox5.TabIndex = 26;
+            this.tbRange.Enabled = false;
+            this.tbRange.Location = new System.Drawing.Point(904, 326);
+            this.tbRange.Name = "tbRange";
+            this.tbRange.Size = new System.Drawing.Size(53, 20);
+            this.tbRange.TabIndex = 26;
             // 
             // label14
             // 
@@ -311,12 +250,13 @@
             this.label14.TabIndex = 25;
             this.label14.Text = "Range";
             // 
-            // textBox6
+            // tbAtackSpeed
             // 
-            this.textBox6.Location = new System.Drawing.Point(904, 364);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(72, 20);
-            this.textBox6.TabIndex = 28;
+            this.tbAtackSpeed.Enabled = false;
+            this.tbAtackSpeed.Location = new System.Drawing.Point(904, 364);
+            this.tbAtackSpeed.Name = "tbAtackSpeed";
+            this.tbAtackSpeed.Size = new System.Drawing.Size(53, 20);
+            this.tbAtackSpeed.TabIndex = 28;
             // 
             // label15
             // 
@@ -333,22 +273,108 @@
             this.timer.Interval = 16;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox7.Image = global::Exams.Properties.Resources._6;
+            this.pictureBox7.Location = new System.Drawing.Point(943, 125);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox7.TabIndex = 15;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox6.Image = global::Exams.Properties.Resources._5_;
+            this.pictureBox6.Location = new System.Drawing.Point(876, 125);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox5.Image = global::Exams.Properties.Resources._4;
+            this.pictureBox5.Location = new System.Drawing.Point(809, 125);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::Exams.Properties.Resources._3;
+            this.pictureBox4.Location = new System.Drawing.Point(943, 33);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox3.Image = global::Exams.Properties.Resources._2;
+            this.pictureBox3.Location = new System.Drawing.Point(876, 33);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox2.Image = global::Exams.Properties.Resources._1;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(809, 33);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pbox
+            // 
+            this.pbox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pbox.Location = new System.Drawing.Point(-1, 48);
+            this.pbox.Name = "pbox";
+            this.pbox.Size = new System.Drawing.Size(800, 600);
+            this.pbox.TabIndex = 0;
+            this.pbox.TabStop = false;
+            this.pbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbox_MouseDown);
+            this.pbox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbox_MouseMove);
+            this.pbox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbox_MouseUp);
+            // 
             // Play
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 638);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbAtackSpeed);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbRange);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbDem);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.level);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.lives);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox7);
@@ -364,18 +390,18 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cash);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbox);
             this.Name = "Play";
             this.Text = "Exems";
-            ((System.ComponentModel.ISupportInitialize)(this.pbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,35 +410,37 @@
         #endregion
 
         public System.Windows.Forms.PictureBox pbox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Timer timer;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox cash;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.PictureBox pictureBox4;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.PictureBox pictureBox6;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.PictureBox pictureBox7;
+        public System.Windows.Forms.TextBox lives;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox level;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.TextBox tbDem;
+        public System.Windows.Forms.TextBox tbRange;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.TextBox tbAtackSpeed;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.Timer timer;
+
+        public System.Windows.Forms.MouseEventHandler pictureBox2_MouseClick { get; set; }
     }
 }
 

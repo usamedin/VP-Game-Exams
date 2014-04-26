@@ -2,19 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Drawing;
 namespace Student_exams
 {
     class Profesor :ObjectOnMap
     {
         public int demage { get; set; }
         public int range { get; set; }
-
-        public Profesor( Point position,int width,int height, int atackSpeed, int demage, int range)
+        public int nextBullet { get; set; }
+        public int fireRate { get; set; }
+        public int price { get; set; }
+        public int MyProperty { get; set; }
+        public Image  img { get; set; }
+        public Profesor( Point position,int width,int height, int atackSpeed, int demage, int range,int fireRate,int price,string img)
             :base(position,width,height,atackSpeed)
         {
+            this.price = price;
+            this.fireRate = fireRate;
             this.demage = demage;
             this.range = range;
+            this.nextBullet = 0;
+            this.img = Image.FromFile("..\\Profesors\\"+img + ".jpg");
         }
 
         public bool isEnemyInRange(Point centerPosEnemy)

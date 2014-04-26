@@ -46,45 +46,81 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bullet.cs" />
-    <Compile Include="Checkpoint.cs" />
+    <Compile Include="Model\Bullet.cs" />
+    <Compile Include="Model\Abstract classes\Checkpoint.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="ObjectOnMap.cs" />
+    <Compile Include="Model\Abstract classes\ObjectOnMap.cs" />
     <Compile Include="Play.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Play.Designer.cs">
       <DependentUpon>Play.cs</DependentUpon>
     </Compile>
-    <Compile Include="Point.cs" />
-    <Compile Include="Profesor.cs" />
+    <Compile Include="Model\Point.cs" />
+    <Compile Include="Model\Profesor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stage.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="Model\Stage.cs" />
+    <Compile Include="Model\Student.cs" />
     <EmbeddedResource Include="Play.resx">
       <DependentUpon>Play.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D-elev_Tomce.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Madzarov_Gjorgji.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Anto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Margita_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Smile_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Verica_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Profesors\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Profesors\5..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Profesors\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Profesors\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Profesors\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Profesors\2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

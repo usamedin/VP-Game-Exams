@@ -14,17 +14,20 @@ namespace Student_exams
         public int price { get; set; }
         public int MyProperty { get; set; }
         public Image  img { get; set; }
-        public Profesor( Point position,int width,int height, int atackSpeed, int demage, int range,int fireRate,int price,string img)
-            :base(position,width,height,atackSpeed)
+        public Profesor( Point position,int width,int height, int demage, int range,int fireRate,int price,string img)
+            :base(position,width,height,0)
         {
             this.price = price;
             this.fireRate = fireRate;
             this.demage = demage;
             this.range = range;
             this.nextBullet = 0;
-            this.img = Image.FromFile("..\\Profesors\\"+img + ".jpg");
+            setImage(img);
         }
-
+        public void setImage(string img)
+        {
+            this.img = Image.FromFile("../../Profesors/"+img+".png");
+        }
         public bool isEnemyInRange(Point centerPosEnemy)
         {
             double distanceDiference = Math.Sqrt(Math.Pow((centerPosition.x - centerPosEnemy.x), 2) + Math.Pow((centerPosition.y - centerPosEnemy.y), 2));

@@ -12,9 +12,10 @@ namespace Student_exams
     public partial class Play : Form
     {
         Game game;
-       public int profSelected = 0;
-       public int x;
-       public int y;
+        public int profSelected = 0;
+        public int x;
+        public int y;
+        public bool pbClicked = false;
         public Play()
         {
             InitializeComponent();
@@ -28,31 +29,37 @@ namespace Student_exams
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             profSelected = 1;
+            game.showDetails(profSelected);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             profSelected = 2;
+            game.showDetails(profSelected);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             profSelected = 3;
+            game.showDetails(profSelected);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             profSelected = 4;
+            game.showDetails(profSelected);
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             profSelected = 5;
+            game.showDetails(profSelected);
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
             profSelected = 6;
+            game.showDetails(profSelected);
         }
 
         private void pbox_MouseUp(object sender, MouseEventArgs e)
@@ -85,6 +92,30 @@ namespace Student_exams
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Play_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                profSelected = 0;
+            }
+        }
+
+        private void Play_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                profSelected = 0;
+            }
+        }
+
+        private void pictureBox2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.A)
+            {
+                profSelected = 0;
+            }
         }
     }
 }

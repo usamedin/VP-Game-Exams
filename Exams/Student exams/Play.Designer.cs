@@ -346,6 +346,7 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.pictureBox2_PreviewKeyDown);
             // 
             // pbox
             // 
@@ -395,6 +396,8 @@
             this.Controls.Add(this.pbox);
             this.Name = "Play";
             this.Text = "Exems";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Play_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Play_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

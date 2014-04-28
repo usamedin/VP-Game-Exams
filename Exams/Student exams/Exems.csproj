@@ -87,24 +87,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="D-elev_Tomce.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Madzarov_Gjorgji.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Anto.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Margita_1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Smile_1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Verica_1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Profesors\6.png" />
   </ItemGroup>
   <ItemGroup>

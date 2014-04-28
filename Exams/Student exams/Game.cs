@@ -70,10 +70,22 @@ namespace Student_exams
                     prof = null;
                     break;
                 case 1:
-                    prof = new Profesor(new Point(x - 15, y - 15), 80, 80, 1000, 20, 100, 30,1000,"1");
+                    prof = new Profesor(new Point(x - 30, y - 30), 60, 60, 30, 100, 30,1000,"1");
                     break;
                 case 2:
-                    prof = new Profesor(new Point(200, 50), 30, 30, 1000, 50, 100, 30,1000,"2");
+                    prof = new Profesor(new Point(x - 30, y - 30), 60, 60, 50, 150, 30, 1500, "2");
+                    break;
+                case 3:
+                    prof = new Profesor(new Point(x - 30, y - 30), 60, 60, 50, 100, 15, 2000, "3");
+                    break;
+                case 4:
+                    prof = new Profesor(new Point(x - 30, y - 30), 60, 60, 150, 200, 60, 2500, "4");
+                    break;
+                case 5:
+                    prof = new Profesor(new Point(x - 30, y - 30), 60, 60, 200, 300, 50, 3000, "5");
+                    break;
+                case 6:
+                    prof = new Profesor(new Point(x - 30, y - 30), 60, 60, 220, 200, 40, 3500, "6");
                     break;
                 default:
                     Console.WriteLine("Default case");
@@ -121,7 +133,7 @@ namespace Student_exams
                     {
                         Random r = new Random();
                         int ofset = r.Next(1, 39);
-                        Student student = new Student(new Point(stages[level].startPosition.x, stages[level].startPosition.y + ofset), 20, 20, stages[level].studentSpeed, 2, stages[level].studentHealth, 10);
+                        Student student = new Student(new Point(stages[level].startPosition.x, stages[level].startPosition.y + ofset), 20, 20, stages[level].studentSpeed, 2, stages[level].studentHealth, 10,"12");
                         students.Add(student);// here is the problem
                         nextStudentSpown = timer + 30;
                         generatedStudents++;
@@ -164,7 +176,8 @@ namespace Student_exams
                 {
                     g.DrawRectangle(new Pen(Brushes.Black, 1), new Rectangle(students[i].position.x - 5, students[i].position.y - 10, students[i].width + 10, 3));
                     g.FillRectangle(Brushes.Blue, new Rectangle(students[i].position.x - 5, students[i].position.y - 10, (int)(((float)students[i].health / 100.0) * students[i].width + 10), 3));
-                    g.FillRectangle(Brushes.Red, new Rectangle(students[i].position.x, students[i].position.y, students[i].width, students[i].height));
+                    //g.FillRectangle(Brushes.Red, new Rectangle(students[i].position.x, students[i].position.y, students[i].width, students[i].height));
+                    g.DrawImage(students[i].img, students[i].position.x, students[i].position.y,20, 22);
                 }
 
                 for (int i = 0; i < bullets.Count; i++)
@@ -206,7 +219,8 @@ namespace Student_exams
 
         public void drowProfesor(Profesor p, Graphics g)
         {
-            g.FillRectangle(Brushes.Black, new Rectangle(p.position.x, p.position.y, p.width, p.height));
+            g.DrawImage(p.img, p.position.x, p.position.y,60,60);
+          //  g.FillRectangle(Brushes.Black, new Rectangle(p.position.x, p.position.y, p.width, p.height));
             g.DrawEllipse(new Pen(Brushes.Green), p.centerPosition.x - p.range, p.centerPosition.y - p.range, p.range * 2, p.range * 2);
         }
         public void moveStudents()
@@ -282,12 +296,39 @@ namespace Student_exams
             }
             b.centerPosition = new Point(b.position.x + (b.width / 2), b.position.y + (b.height / 2));
         }
-        public void showDetails()
+        public void showDetails(int p)
         {
-            for (int i = 0; i < profesors.Count; i++)
+            Profesor prof=null;
+            switch (p)
             {
-
+                case 0:
+                    prof = null;
+                    break;
+                case 1:
+                    prof = new Profesor(new Point(0, 0), 60, 60, 30, 100, 30, 1000, "1");
+                    break;
+                case 2:
+                    prof = new Profesor(new Point(0, 0), 60, 60, 50, 150, 30, 1500, "2");
+                    break;
+                case 3:
+                    prof = new Profesor(new Point(0, 0), 60, 60, 50, 100, 15, 2000, "3");
+                    break;
+                case 4:
+                    prof = new Profesor(new Point(0, 0), 60, 60, 150, 200, 60, 2500, "4");
+                    break;
+                case 5:
+                    prof = new Profesor(new Point(0, 0), 60, 60, 200, 300, 50, 3000, "5");
+                    break;
+                case 6:
+                    prof = new Profesor(new Point(0,0), 60, 60, 220, 200, 40, 3500, "6");
+                    break;
+                default:
+                    Console.WriteLine("Default case");
+                    break;
             }
+            formPlay.tbDem.Text = prof.demage + "";
+            formPlay.tbRange.Text = prof.range + "";
+            formPlay.tbAtackSpeed.Text = prof.fireRate + "";
         }
     }
 }

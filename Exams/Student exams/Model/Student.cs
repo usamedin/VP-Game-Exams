@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 
@@ -12,10 +13,13 @@ namespace Student_exams
         public int direction { get; set; }
         public int health { get; set; }
         public int cost { get; set; }
+        public Image img { get; set; }
+        public string imgS;
 
-        public Student(Point position, int width, int height, int speed, int direction, int health,int cost)
+        public Student(Point position, int width, int height, int speed, int direction, int health,int cost,string imgS)
             : base(position, width, height, speed)
         {
+            this.imgS = imgS;
             this.cost = cost;
             this.position = new Point(position);
             this.centerPosition = new Point(position.x + (width / 2), position.y + (height / 2));
@@ -25,7 +29,11 @@ namespace Student_exams
             this.health = health;
             this.width = width;
             this.height = height;
-            
+            setImage(imgS);
+        }
+        public void setImage(string img)
+        {
+            this.img = Image.FromFile("../../Students/" + img + ".png");
         }
         public bool moveStudent(Checkpoint[] ch)
         {
@@ -35,6 +43,7 @@ namespace Student_exams
             {
                 return false;
             }
+            string newimg;
             switch (direction)
             {
                 case 1:
@@ -74,6 +83,8 @@ namespace Student_exams
                     {
                         direction = ch[checkpoint].coordinate;
                         checkpoint++;
+                        newimg=imgS[0]+"4";
+                        setImage("14");
                     }
                     break;
             }

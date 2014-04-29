@@ -25,3 +25,16 @@ C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj
 C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Student_exams.StartForm.resources
 C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Student_exams.About.resources
 C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Student_exams.Pause.resources
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\bin\Debug\Exams.exe.manifest
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\bin\Debug\Exams.application
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Exams.TrustInfo.xml
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Exams.exe.manifest
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Exams.application
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\bin\Debug\Profesors\6.png
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\bin\Debug\Profesors\4.png
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\bin\Debug\Profesors\3.png
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\bin\Debug\Profesors\1.png
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\bin\Debug\Profesors\2.png
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\bin\Debug\Students\14.png
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\bin\Debug\Students\12.png
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\bin\Debug\Profesors\5.png

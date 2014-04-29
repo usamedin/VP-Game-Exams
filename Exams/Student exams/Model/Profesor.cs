@@ -26,7 +26,7 @@ namespace Student_exams
         }
         public void setImage(string img)
         {
-            this.img = Image.FromFile("../../Profesors/"+img+".png");
+            this.img = Image.FromFile("Profesors/"+img+".png");
         }
         public bool isEnemyInRange(Point centerPosEnemy)
         {

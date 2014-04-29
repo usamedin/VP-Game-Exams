@@ -33,7 +33,7 @@ namespace Student_exams
         }
         public void setImage(string img)
         {
-            this.img = Image.FromFile("../../Students/" + img + ".png");
+            this.img = Image.FromFile("Students/" + img + ".png");
         }
         public bool moveStudent(Checkpoint[] ch)
         {

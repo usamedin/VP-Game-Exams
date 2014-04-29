@@ -356,7 +356,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Image = global::Exams.Properties.Resources._5_;
+            this.pictureBox6.Image = global::Exams.Properties.Resources._5;
             this.pictureBox6.Location = new System.Drawing.Point(876, 125);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(63, 63);

@@ -21,3 +21,4 @@ C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj
 C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Release\Exams.application
 C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Release\Exams.exe
 C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Release\Exams.pdb
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Release\Exems.csprojResolveAssemblyReference.cache

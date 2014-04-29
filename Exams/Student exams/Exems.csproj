@@ -27,7 +27,7 @@
     <ProductName>Exams</ProductName>
     <PublisherName>Usko</PublisherName>
     <SuiteName>Usamedin</SuiteName>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

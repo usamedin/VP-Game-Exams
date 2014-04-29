@@ -56,7 +56,7 @@ namespace Student_exams
                         x = s.checkpoints[i].value;
                         y = s.checkpoints[i + 1].value;
                         width = pathWidth;
-                        height = y - s.checkpoints[i + 1].value + pathWidth;
+                        height = s.checkpoints[i - 1].value-y + pathWidth;
                     }
                 }
                 else if (lastDir == 3)
@@ -106,8 +106,8 @@ namespace Student_exams
                     }
                     else if (s.checkpoints[i].coordinate == 2)
                     {
-                        x = s.checkpoints[i].value;
-                        y = s.checkpoints[i + 1].value;
+                        x = s.checkpoints[i-1].value;
+                        y = s.checkpoints[i].value;
                         width = s.checkpoints[i + 1].value - x;
                         height = pathWidth;
                     }
@@ -117,6 +117,10 @@ namespace Student_exams
                 lastDir = s.checkpoints[i].coordinate;
                 g.FillRectangle(new SolidBrush(color), new Rectangle(x, y, width, height));
             }
+            x = s.checkpoints[s.numCP-1].value;
+           // y = s.checkpoints[i + 1].value;
+            color = System.Drawing.ColorTranslator.FromHtml("#993399");
+            g.FillRectangle(new SolidBrush(color), new Rectangle(x, y-20, 100, 100));
         }
     }
 }

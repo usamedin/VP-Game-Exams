@@ -16,11 +16,15 @@ namespace Student_exams
         public int x;
         public int y;
         public bool pbClicked = false;
-        public Play()
+        int levelV;
+        public Play(int level)
         {
+            this.levelV = level;
             InitializeComponent();
-            game = new Game(this, 0);
+            game = new Game(this, level);
             game.init();
+            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#006699");
+            
         }
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -116,6 +120,17 @@ namespace Student_exams
             {
                 profSelected = 0;
             }
+        }
+
+        private void Play_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Pause p = new Pause(this , levelV);
+            p.Show();
         }
     }
 }

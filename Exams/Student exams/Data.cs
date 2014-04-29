@@ -7,8 +7,10 @@ namespace Student_exams
 {
     class Data
     {
-        public static Checkpoint [] checkpointS1 = { new Checkpoint(3, 700), new Checkpoint(4, 260), new Checkpoint(3, 100), new Checkpoint(2, 420), new Checkpoint(0, 700) };
-        public static Stage[] stages = { new Stage(new Point(1,100), checkpointS1, 5, 4, 20,12000,100,3) };
+        public static Checkpoint[] checkpointS1 = { new Checkpoint(3, 200), new Checkpoint(4, 260), new Checkpoint(3, 20), new Checkpoint(2, 420), new Checkpoint(1, 350), new Checkpoint(2, 100), new Checkpoint(3, 600), new Checkpoint(2, 420), new Checkpoint(0, 700) };
+        public static Checkpoint [] checkpointS2 = { new Checkpoint(3, 700), new Checkpoint(4, 260), new Checkpoint(3, 100), new Checkpoint(2, 420), new Checkpoint(0, 700) };
+        public static Checkpoint[] checkpointS3 = { new Checkpoint(3, 700), new Checkpoint(4, 460), new Checkpoint(0, 0) };
+        public static Stage[] stages = { new Stage(new Point(1, 100), checkpointS1, 9, 4, 20, 3000, 60, 3), new Stage(new Point(1, 100), checkpointS2, 5, 5, 30, 8000, 200, 3), new Stage(new Point(1, 80), checkpointS3, 3, 7, 5, 3500, 300, 1) };
        
     }
 }

@@ -15,7 +15,7 @@ namespace Student_exams
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Play());
+            Application.Run(new StartForm());
         }
     }
 }

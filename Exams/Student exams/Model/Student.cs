@@ -63,6 +63,8 @@ namespace Student_exams
                     {
                         direction = ch[checkpoint].coordinate;
                         checkpoint++;
+                        newimg = imgS[0] + "4";
+                        setImage(newimg);
                     }
                     break;
 
@@ -73,6 +75,7 @@ namespace Student_exams
                     {
                         direction = ch[checkpoint].coordinate;
                         checkpoint++;
+                        
                     }
                     break;
 
@@ -83,8 +86,8 @@ namespace Student_exams
                     {
                         direction = ch[checkpoint].coordinate;
                         checkpoint++;
-                        newimg=imgS[0]+"4";
-                        setImage("14");
+                        newimg = imgS[0] + "2";
+                        setImage(newimg);
                     }
                     break;
             }

@@ -22,3 +22,6 @@ C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj
 C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Student_exams.Play.resources
 C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Exams.Properties.Resources.resources
 C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Exems.csproj.GenerateResource.Cache
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Student_exams.StartForm.resources
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Student_exams.About.resources
+C:\Users\Усамедин\Documents\GitHub\VP-Game-Exams\Exams\Student exams\obj\x86\Debug\Student_exams.Pause.resources

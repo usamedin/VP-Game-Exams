@@ -44,14 +44,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Exams.exe" size="154112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Exams.exe" size="154624">
       <assemblyIdentity name="Exams" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>qVv2G5dvQ7Hw19jfXNHaph6B/gI=</dsig:DigestValue>
+        <dsig:DigestValue>GlYRmTyxHIGsfxn7k4ugx0EL45U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

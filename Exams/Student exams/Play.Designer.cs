@@ -472,7 +472,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbox);
             this.Name = "Play";
-            this.Text = "Exems";
+            this.Text = "Exams";
             this.Load += new System.EventHandler(this.Play_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Play_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Play_KeyPress);

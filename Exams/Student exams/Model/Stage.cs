@@ -27,6 +27,19 @@ namespace Student_exams
             this.studentsPerClas = spc;
             this.studentHealth = studentHealth;
         }
+        public Stage()
+        { }
+        public Stage(Stage s)
+        {
+            this.studentSpeed = s.studentSpeed;
+            this.checkpoints = s.checkpoints;
+            this.startPosition = s.startPosition;
+            this.numCP = s.numCP;
+            this.classes =s.classes;
+            this.startingCash = s.startingCash;
+            this.studentsPerClas = s.studentsPerClas;
+            this.studentHealth = s.studentHealth;
+        }
         public void drowStage(Stage s,Graphics g)
         {
             int x, y, pathWidth, lastDir;

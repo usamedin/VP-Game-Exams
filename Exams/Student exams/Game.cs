@@ -18,7 +18,7 @@ namespace Student_exams
         List<Bullet> bullets;
         Play formPlay;
         Bitmap bitMap;
-        Stage[] stages = Data.stages;
+        Stage[] stages;
         int level;
         int timer;
         int generatedStudents;
@@ -48,6 +48,10 @@ namespace Student_exams
             students = new List<Student>();
             bullets = new List<Bullet>();
             pbox = formPlay.pbox;
+            stages = new Stage[Data.stages.Count()];
+            for(int i=0;i<Data.stages.Count();i++){
+                stages[i] = new Stage(Data.stages[i]);
+            }
             cash = stages[level].startingCash;
             lives = 5;
             vave=1;
@@ -55,6 +59,7 @@ namespace Student_exams
             sClass = 0;
             generatedStudents = 0;
             nextStudentSpown = 60;
+            
 
             formPlay.cash.Text = cash + "";
             formPlay.level.Text = level + 1 + "";

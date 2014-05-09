@@ -201,6 +201,7 @@ namespace Student_exams
                     {
                         g.FillRectangle(Brushes.Red, new Rectangle(formPlay.x - 15, formPlay.y - 15, 30, 30));
                     }
+                    g.DrawEllipse(new Pen(Brushes.Silver), formPlay.x - formPlay.profRange, formPlay.y - formPlay.profRange, formPlay.profRange * 2, formPlay.profRange * 2);
 
                 }
                 pbox.CreateGraphics().DrawImageUnscaled(bitMap, 0, 0);

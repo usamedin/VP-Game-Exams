@@ -13,6 +13,7 @@ namespace Student_exams
     {
         Game game;
         public int profSelected = 0;
+        public int profRange = 0;
         public int x;
         public int y;
         public bool pbClicked = false;
@@ -33,36 +34,42 @@ namespace Student_exams
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             profSelected = 1;
+            profRange = 100;
             game.showDetails(profSelected);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             profSelected = 2;
+            profRange = 150;
             game.showDetails(profSelected);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             profSelected = 3;
+            profRange = 100;
             game.showDetails(profSelected);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             profSelected = 4;
+            profRange = 200;
             game.showDetails(profSelected);
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             profSelected = 5;
+            profRange = 300;
             game.showDetails(profSelected);
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
             profSelected = 6;
+            profRange = 200;
             game.showDetails(profSelected);
         }
 
@@ -108,10 +115,11 @@ namespace Student_exams
 
         private void Play_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.A)
             {
-                profSelected = 0;
+                MessageBox.Show("por");
             }
+            MessageBox.Show("por");
         }
 
         private void pictureBox2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)

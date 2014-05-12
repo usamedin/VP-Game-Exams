@@ -297,7 +297,7 @@ namespace Student_exams
                         students[j].health -= bullets[i].demage;
                         if (students[j].health <= 0)
                         {
-                            cash += students[j].cost ;
+                            cash += (int)(students[j].cost*0.7) ;
                             formPlay.cash.Text = cash + "";
                             students.RemoveAt(j);
 

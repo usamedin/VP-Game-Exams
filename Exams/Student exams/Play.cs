@@ -115,16 +115,12 @@ namespace Student_exams
 
         private void Play_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.A)
-            {
-                MessageBox.Show("por");
-            }
-            MessageBox.Show("por");
+           
         }
 
         private void pictureBox2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            if (e.KeyCode == Keys.A)
+            if (e.KeyCode == Keys.Escape)
             {
                 profSelected = 0;
             }

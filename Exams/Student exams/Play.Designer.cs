@@ -471,6 +471,7 @@
             this.Controls.Add(this.cash);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbox);
+            this.KeyPreview = true;
             this.Name = "Play";
             this.Text = "Exams";
             this.Load += new System.EventHandler(this.Play_Load);

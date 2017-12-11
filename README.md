@@ -1,7 +1,6 @@
+**This is faculty project 
 
 <pr>VP-Game-Exams
-Усамедин Нухији 111155
-
 <b>                          Проектна задача по Визуелно Програмирање
                                                     Exams</b>
                                                     

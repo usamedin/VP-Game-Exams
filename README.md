@@ -1,10 +1,10 @@
-**This is faculty project 
+<h3>Note: This is faculty project Exams 2D Tower Defense game.</h3>
 
 <pr>VP-Game-Exams
 <b>                          Проектна задача по Визуелно Програмирање
                                                     Exams</b>
                                                     
-Exams е едноставна стратегиска tower degfese игра, во која корисникот има задача да ги спречи студентите да стигнат до целта.
+Exams е едноставна стратегиска tower defence игра, во која корисникот има задача да ги спречи студентите да стигнат до целта.
  
  
 Начинот на играње е следен:
